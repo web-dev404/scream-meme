@@ -17,7 +17,7 @@ copyButton.addEventListener("click", () => {
     setTimeout(() => {
       modal.classList.add("hidden");
       overlay.classList.add("hidden");
-    }, 4000);
+    }, 2000);
 
     localStorage.setItem("videoPlayed", "true");
   });
