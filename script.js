@@ -6,20 +6,13 @@ const overlay = document.querySelector(".overlay");
 
 videoElement.load();
 
-function forceRepaint(element) {
-  element.style.display = 'none';
-  element.offsetHeight; // Trigger a reflow
-  element.style.display = '';
-}
-
 copyButton.addEventListener("click", () => {
   // if (!localStorage.getItem("videoPlayed")) {
-  forceRepaint(videoElement);
-  videoElement.classList.remove("hidden");
+  videoElement.classList.remove("opacity");
   videoElement.play();
 
   videoElement.addEventListener("ended", () => {
-    videoElement.classList.add("hidden");
+    videoElement.classList.add("opacity");
 
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");

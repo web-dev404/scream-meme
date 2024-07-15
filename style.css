@@ -73,6 +73,10 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100000000;
+  height: 100%;
+  width: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .ca-wrapper {
@@ -100,7 +104,8 @@ h6 {
 }
 
 .opacity {
-  opacity: 0;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .socials {
