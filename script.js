@@ -4,6 +4,8 @@ const videoElement = document.getElementById("screamer");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 
+videoElement.load();
+
 copyButton.addEventListener("click", () => {
   // if (!localStorage.getItem("videoPlayed")) {
   videoElement.classList.remove("hidden");
