@@ -6,8 +6,15 @@ const overlay = document.querySelector(".overlay");
 
 videoElement.load();
 
+function forceRepaint(element) {
+  element.style.display = 'none';
+  element.offsetHeight; // Trigger a reflow
+  element.style.display = '';
+}
+
 copyButton.addEventListener("click", () => {
   // if (!localStorage.getItem("videoPlayed")) {
+  forceRepaint(videoElement);
   videoElement.classList.remove("hidden");
   videoElement.play();
 
